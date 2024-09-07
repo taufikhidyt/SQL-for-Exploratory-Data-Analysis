@@ -1,4 +1,4 @@
-# SQL for Data Exploratory: TheLook_Ecommerce
+# SQL for Data Exploratory: TheLook Ecommerce
 Repository ini memuat eksplorasi data menggunakan Google Big Query.
 Dataset: 
 
