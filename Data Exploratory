@@ -1,4 +1,6 @@
 -- Menghitung total penjualan dan pendapatan berdasarkan brand
+
+```sql
 WITH brand_sales AS(
   SELECT 
     p.brand as product_brand,
@@ -14,3 +16,4 @@ WITH brand_sales AS(
 )
 SELECT * FROM brand_sales
 ORDER BY 2 DESC
+```
