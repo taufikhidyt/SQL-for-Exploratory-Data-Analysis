@@ -3,6 +3,7 @@ Repository ini memuat eksplorasi data menggunakan Google Big Query.
 Dataset: 
 
 **Product and Brand Analysis**
+
 1. Menghitung total penjualan dan pendapatan berdasarkan kategori produk
 ```sql
 WITH product_sales AS(
@@ -89,6 +90,7 @@ ORDER BY 2 DESC
 ```
 
 **Customer Analysis**
+
 6. Menghitung keuntungan berdasarkan kelompok usia pelanggan
 ```sql
 SELECT 
