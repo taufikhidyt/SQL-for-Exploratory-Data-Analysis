@@ -1,6 +1,7 @@
 # SQL for Data Exploratory: TheLook Ecommerce
 
 **Transforming Data into Stories**
+
 Repository ini memuat eksplorasi data menggunakan Google Big Query.
 
 Dataset: [theLook Ecommerce Dataset (BigQuery Public Data)](https://console.cloud.google.com/bigquery?p=bigquery-public-data&d=thelook_ecommerce&page=dataset&project=my-gcp-data-projects&ws=!1m9!1m4!4m3!1sbigquery-public-data!2sthelook_ecommerce!3sorder_items!1m3!3m2!1sbigquery-public-data!2sthelook_ecommerce)
