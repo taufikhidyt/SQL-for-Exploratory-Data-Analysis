@@ -27,6 +27,27 @@ SELECT * FROM product_sales
 ORDER BY 2 DESC
 ```
 
+## Output:
+***We have 26 product categories and below are the results for 5 most profitable produt categories***
+
+product_category| total_revenue | total_sales
+-- | -- | --
+Outwear & Coats | 2192420.18 | 15250
+Jeans | 2071195.11 | 21082
+Sweaters | 1453760.76 | 19044
+Suits & Sport Coats | 1112227.37 | 8929
+Swim | 1087861.11 | 19075
+
+***Below are also the results for 5 least profitable product categories***
+
+product_category| total_revenue | total_sales
+-- | -- | --
+Skirts | 175456.17 | 3394
+Leggings | 149220.95 | 5265
+Socks & Hosiery | 108852.92 | 6494
+Jumpsuits & Rompers | 69276.87 | 1475
+Clothing Sets | 23908.6 | 285
+
 2. Menghitung total penjualan dan pendapatan berdasarkan brand
 ```sql
 WITH brand_sales AS(
