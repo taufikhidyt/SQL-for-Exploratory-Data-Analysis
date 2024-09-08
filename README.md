@@ -48,6 +48,12 @@ Socks & Hosiery | 108852.92 | 6494
 Jumpsuits & Rompers | 69276.87 | 1475
 Clothing Sets | 23908.6 | 285
 
+### Insights:
+* *product category* adalah Outwear & Coats, followed by Jeans and Sweaters.
+
+* The least profitable product categories are clothing sets Jumpsuits & Rompers.
+
+
 2. Menghitung total penjualan dan pendapatan berdasarkan brand
 ```sql
 WITH brand_sales AS(
