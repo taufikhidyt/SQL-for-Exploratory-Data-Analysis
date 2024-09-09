@@ -2,7 +2,7 @@
 
 **Transforming Data into Stories**
 
-Repository ini memuat eksplorasi data menggunakan Google Big Query.
+Repository ini memuat eksplorasi data theLook Ecommerce menggunakan Google Big Query.
 
 Dataset: [theLook Ecommerce Dataset (BigQuery Public Data)](https://console.cloud.google.com/bigquery?p=bigquery-public-data&d=thelook_ecommerce&page=dataset&project=my-gcp-data-projects&ws=!1m9!1m4!4m3!1sbigquery-public-data!2sthelook_ecommerce!3sorder_items!1m3!3m2!1sbigquery-public-data!2sthelook_ecommerce)
 
@@ -28,7 +28,8 @@ ORDER BY 2 DESC
 ```
 
 ## Output:
-***We have 26 product categories and below are the results for 5 most profitable produt categories***
+
+***TOP 5 kategori produk yang menghasilkan pendapatan terbesar***
 
 product_category| total_revenue | total_sales
 -- | -- | --
@@ -38,7 +39,7 @@ Sweaters | 1453760.76 | 19044
 Suits & Sport Coats | 1112227.37 | 8929
 Swim | 1087861.11 | 19075
 
-***Below are also the results for 5 least profitable product categories***
+***TOP 5 kategori produk yang menghasilkan pendapatan terkecil***
 
 product_category| total_revenue | total_sales
 -- | -- | --
@@ -49,10 +50,9 @@ Jumpsuits & Rompers | 69276.87 | 1475
 Clothing Sets | 23908.6 | 285
 
 ### Insights:
-* *product category* adalah Outwear & Coats, followed by Jeans and Sweaters.
+* Kategori produk yang menghasilkan pendapatan tertinggi adalah adalah Outwear & Coats, lalu diikuti by Jeans and Sweaters.
 
-* The least profitable product categories are clothing sets Jumpsuits & Rompers.
-
+* Clothing Sets dan Jumpsuits & Rompers adalah kategori produk yang menghasilkan pendapatan terendah.
 
 2. Menghitung total penjualan dan pendapatan berdasarkan brand
 ```sql
