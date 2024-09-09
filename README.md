@@ -6,9 +6,9 @@ Repository ini memuat eksplorasi data theLook Ecommerce menggunakan Google Big Q
 
 Dataset: [theLook Ecommerce Dataset (BigQuery Public Data)](https://console.cloud.google.com/bigquery?p=bigquery-public-data&d=thelook_ecommerce&page=dataset&project=my-gcp-data-projects&ws=!1m9!1m4!4m3!1sbigquery-public-data!2sthelook_ecommerce!3sorder_items!1m3!3m2!1sbigquery-public-data!2sthelook_ecommerce)
 
-**Product and Brand Analysis**
+## Product and Brand Analysis
 
-1. Menghitung total penjualan dan pendapatan berdasarkan kategori produk
+**1. Menghitung total penjualan dan pendapatan berdasarkan kategori produk**
 ```sql
 WITH product_sales AS(
   SELECT 
@@ -27,7 +27,7 @@ SELECT * FROM product_sales
 ORDER BY 2 DESC
 ```
 
-## Output:
+### Output:
 
 ***TOP 5 kategori produk yang menghasilkan pendapatan terbesar***
 
@@ -49,12 +49,12 @@ Socks & Hosiery | 108852.92 | 6494
 Jumpsuits & Rompers | 69276.87 | 1475
 Clothing Sets | 23908.6 | 285
 
-### Insights:
+#### Insights:
 * Kategori produk yang menghasilkan pendapatan tertinggi adalah adalah Outwear & Coats, lalu diikuti by Jeans and Sweaters.
 
 * Clothing Sets dan Jumpsuits & Rompers adalah kategori produk yang menghasilkan pendapatan terendah.
 
-2. Menghitung total penjualan dan pendapatan berdasarkan brand
+**2. Menghitung total penjualan dan pendapatan berdasarkan brand**
 ```sql
 WITH brand_sales AS(
   SELECT 
@@ -72,6 +72,34 @@ WITH brand_sales AS(
 SELECT * FROM brand_sales
 ORDER BY 2 DESC
 ```
+
+### Output:
+
+***TOP 5 brand produk yang menghasilkan pendapatan terbesar***
+
+product_brand| total_revenue | total_sales
+-- | -- | --
+Outwear & Coats | 2192420.18 | 15250
+Jeans | 2071195.11 | 21082
+Sweaters | 1453760.76 | 19044
+Suits & Sport Coats | 1112227.37 | 8929
+Swim | 1087861.11 | 19075
+
+***TOP 5 kategori produk yang menghasilkan pendapatan terkecil***
+
+product_category| total_revenue | total_sales
+-- | -- | --
+Skirts | 175456.17 | 3394
+Leggings | 149220.95 | 5265
+Socks & Hosiery | 108852.92 | 6494
+Jumpsuits & Rompers | 69276.87 | 1475
+Clothing Sets | 23908.6 | 285
+
+#### Insights:
+* Kategori produk yang menghasilkan pendapatan tertinggi adalah adalah Outwear & Coats, lalu diikuti by Jeans and Sweaters.
+
+* Clothing Sets dan Jumpsuits & Rompers adalah kategori produk yang menghasilkan pendapatan terendah.
+
 3. Brand cancellation and return
 ```sql
 WITH brand_can_re AS (
