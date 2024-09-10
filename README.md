@@ -79,26 +79,14 @@ ORDER BY 2 DESC
 
 product_brand| total_revenue | total_sales
 -- | -- | --
-Outwear & Coats | 2192420.18 | 15250
-Jeans | 2071195.11 | 21082
-Sweaters | 1453760.76 | 19044
-Suits & Sport Coats | 1112227.37 | 8929
-Swim | 1087861.11 | 19075
-
-***TOP 5 kategori produk yang menghasilkan pendapatan terkecil***
-
-product_category| total_revenue | total_sales
--- | -- | --
-Skirts | 175456.17 | 3394
-Leggings | 149220.95 | 5265
-Socks & Hosiery | 108852.92 | 6494
-Jumpsuits & Rompers | 69276.87 | 1475
-Clothing Sets | 23908.6 | 285
+Calvin Klein | 342566.72 | 5577
+Diesel | 341386.33 | 2464
+True Religion | 312022.21 | 1518
+7 For All Mankind | 300046.5 | 1904
+Carhartt | 278229.74 | 4252
 
 #### Insights:
-* Kategori produk yang menghasilkan pendapatan tertinggi adalah adalah Outwear & Coats, lalu diikuti by Jeans and Sweaters.
-
-* Clothing Sets dan Jumpsuits & Rompers adalah kategori produk yang menghasilkan pendapatan terendah.
+* Brand yang menghasilkan pendapatan tertinggi adalah adalah Calvin Klein.
 
 3. Brand cancellation and return
 ```sql
