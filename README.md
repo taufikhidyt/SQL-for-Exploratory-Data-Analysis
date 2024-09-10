@@ -88,39 +88,7 @@ Carhartt | 278229.74 | 4252
 #### Insights:
 * Brand yang menghasilkan pendapatan tertinggi adalah adalah Calvin Klein.
 
-3. Brand cancellation and return
-```sql
-WITH brand_can_re AS (
-  SELECT
-    p.brand AS product_brand,
-    SUM(CASE WHEN oi.status = 'Cancelled' THEN 1 ELSE null END) AS cancelled,
-    SUM(CASE WHEN oi.status = 'Returned' THEN 1 ELSE null END) AS returned
-  FROM bigquery-public-data.thelook_ecommerce.order_items oi
-  INNER JOIN bigquery-public-data.thelook_ecommerce.products p
-  ON oi.product_id = p.id
-  GROUP BY 1
-)
-SELECT * FROM brand_can_re
-ORDER BY 2 DESC
-```
-
-4. Product cancellation and return
-```sql
-WITH product_can_re AS (
-  SELECT
-    p.category AS product_category,
-    SUM(CASE WHEN oi.status = 'Cancelled' THEN 1 ELSE null END) AS cancelled,
-    SUM(CASE WHEN oi.status = 'Returned' THEN 1 ELSE null END) AS returned
-  FROM bigquery-public-data.thelook_ecommerce.order_items oi
-  INNER JOIN bigquery-public-data.thelook_ecommerce.products p
-  ON oi.product_id = p.id
-  GROUP BY 1
-)
-SELECT * FROM product_can_re
-ORDER BY 2 DESC
-```
-
-5. Revenue
+3. MoM revenue
 ```sql
 SELECT
   EXTRACT(MONTH FROM oi.Created_at) AS months,
@@ -135,8 +103,26 @@ WHERE oi.status NOT IN ('Cancelled', 'Returned')
 GROUP BY 1
 ORDER BY 2 DESC
 ```
+### Output:
+months | revenue | order_count | customers_purchased
+-- | -- | -- | --
+8 | 2024225.98 | 12925 | 11838
+7 | 1730887.66 | 10690 | 10048
+9 | 1465431.58 | 8711 | 7793
+6 | 1434075.1 | 9161 | 8754
+5 | 1417477.58 | 8699 | 8347
+4 | 1305888.76 | 7846 | 7553
+3 | 1187877.65 | 7408 | 7142
+12 | 1028928.7 | 6155 | 5995
+1 | 1014080.3 | 6494 | 6275
+2 | 986666.35 | 6246 | 6059
+10 | 895719.13 | 5525 | 5377
+11 | 881674.83 | 5599 | 5440
 
-**Customer Analysis**
+### Insights
+* Revenue has increased steadily
+
+## Customer Analysis
 
 6. Menghitung keuntungan berdasarkan kelompok usia pelanggan
 ```sql
