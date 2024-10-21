@@ -88,14 +88,11 @@ Carhartt | 278229.74 | 4252
 #### Insights:
 * Brand yang menghasilkan pendapatan tertinggi adalah adalah Calvin Klein.
 
-3. MoM revenue
+**3. MoM revenue**
 ```sql
 SELECT
   EXTRACT(MONTH FROM oi.Created_at) AS months,
-  ROUND(SUM(oi.sale_price * o.num_of_item), 2) AS total_revenue,
-  SUM(o.num_of_item) AS total_sales,
-  COUNT(DISTINCT oi.order_id) AS order_count,
-  COUNT(DISTINCT oi.user_id) AS customers_purchased
+  ROUND(SUM(oi.sale_price * o.num_of_item), 2) AS total_revenue
 FROM `bigquery-public-data.thelook_ecommerce.order_items`AS oi
 INNER JOIN `bigquery-public-data.thelook_ecommerce.orders` AS o 
 ON oi.order_id = o.order_id
@@ -104,27 +101,29 @@ GROUP BY 1
 ORDER BY 2 DESC
 ```
 ### Output:
-months | revenue | order_count | customers_purchased
--- | -- | -- | --
-8 | 2024225.98 | 12925 | 11838
-7 | 1730887.66 | 10690 | 10048
-9 | 1465431.58 | 8711 | 7793
-6 | 1434075.1 | 9161 | 8754
-5 | 1417477.58 | 8699 | 8347
-4 | 1305888.76 | 7846 | 7553
-3 | 1187877.65 | 7408 | 7142
-12 | 1028928.7 | 6155 | 5995
-1 | 1014080.3 | 6494 | 6275
-2 | 986666.35 | 6246 | 6059
-10 | 895719.13 | 5525 | 5377
-11 | 881674.83 | 5599 | 5440
+months | revenue 
+-- | -- 
+10 | 2024225.98 
+9 | 1658986.66
+8 | 1507239.76
+7 | 1395609.97
+6 | 1239216.78
+5 | 1226179.71
+3 | 1146874.68
+4 | 1086385.7
+1 | 1005730.67
+2 | 988035.57
+12 | 954615.49
+11 | 901517.32
 
 ### Insights
-* Revenue has increased steadily
+* Revenue has increased steadily. The month with the highest revenue is October.
+
+###------------------------------------------------------------------------------------------
 
 ## Customer Analysis
 
-6. Menghitung keuntungan berdasarkan kelompok usia pelanggan
+**4. Menghitung keuntungan berdasarkan kelompok usia pelanggan**
 ```sql
 SELECT 
   CASE 
@@ -147,7 +146,19 @@ GROUP BY 1
 ORDER BY 3 DESC
 ```
 
-7. Menghitung keuntungan berdasarkan jenis kelamin pelanggan
+### Output:
+age_group | total_customer | total_revenue
+-- | -- | --
+Dewasa Akhir | 22563 | 5184256.56
+Lansia | 16950 | 3848659.9
+Dewasa Awal | 11135 | 2567048.03
+Remaja Akhir | 8976 | 2089841.59
+Remaja Awal | 6695 | 1505111.38
+
+#### Insights:
+* Pelanggan pada kelompok usia `Dewasa Akhir` memberikan kontribusi pendapatan terbesar dan merupakan kelompok usia dengan jumlah pelanggan terbanyak dibanding kelompok usia lainnya.
+
+**5. Menghitung keuntungan berdasarkan jenis kelamin pelanggan**
 ```sql
 SELECT 
   u.gender,
@@ -162,8 +173,16 @@ WHERE oi.status NOT IN ('Cancelled', 'Returned')
 GROUP BY 1
 ORDER BY 2 DESC
 ```
+### Output:
+gender | total_revenue | total_sales 
+-- | -- | --
+M | 8116630.85 | 129318
+F | 7078286.63 | 127876
 
-8. Mengidentifikasi negara dengan jumlah pelanggan terbesar
+#### Insights:
+* Pelanggan laki-laki memberikan kontribusi revenue dan penjualan lebih besar dibandingkan dengan pelanggan perempuan.
+
+**6. Mengidentifikasi TOP 5 negara dengan jumlah pelanggan terbesar**
 ```sql
 SELECT 
   country,
@@ -171,10 +190,22 @@ SELECT
 FROM `bigquery-public-data.thelook_ecommerce.users` 
 GROUP BY 1
 ORDER BY 2 DESC
-LIMIT 10;
+LIMIT 5;
 ```
 
-9. Mengidentifikasi daftar 9 customer IDs dengan pembelian terbanyak. Pembeli tersebut akan diberi diskon 9.9
+### Output:
+country | customer_count
+-- | -- 
+China | 33894
+United States | 22498
+Brasil | 14595
+South Korea | 5366
+France | 4833
+
+#### Insights:
+* TOP 5 negara dengan jumlah pelanggan terbesar berturut-turut adalah China, United States, Brasil, Sounth Korea, dan France.
+
+**7. Mengidentifikasi daftar 9 customer IDs dengan pembelian terbanyak. Pembeli tersebut akan diberi diskon 9.9**
 ```sql
 SELECT
   u.id AS customer_id,
@@ -191,5 +222,20 @@ ORDER BY 4 DESC
 LIMIT 9
 ```
 
+### Output:
+customer_id | fullname | email | total_revenue
+-- | -- | -- | -- 
+58143 | Thomas Torres | thomastorres@example.org | 5647.71
+93116 | Raymond Smith | raymondsmith@example.net | 5307.76
+78686 | Arthur Hansen | arthurhansen@example.com | 5204.16
+98120 | Phillip Miller | phillipmiller@example.com | 4897.08
+89749 | Richard Benton | richardbenton@example.net | 4698.75
+84990 | Erica Davis | ericadavis@example.net | 4675.58
+52576 | Kurt Daniels | kurtdaniels@example.org | 4669.2
+92094 | Russell Durham | russelldurham@example.com | 4666.91
+20346 | John Miller| johnmiller@example.com | 4588.46
 
-**Rekomendasi**
+#### Insights:
+* Tabel di atas memberikan daftar pelanggan dengan total pembelian terbanyak, pelanggan nomor satu dengan total pembelian terbanyak adalah Thomas Torres.
+
+## Rekomendasi
