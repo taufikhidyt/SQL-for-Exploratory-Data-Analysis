@@ -239,3 +239,34 @@ customer_id | fullname | email | total_revenue
 * Tabel di atas memberikan daftar pelanggan dengan total pembelian terbanyak, pelanggan nomor satu dengan total pembelian terbanyak adalah Thomas Torres.
 
 ## Rekomendasi
+
+Berdasarkan hasil analisis data TheLook Ecommerce menggunakan SQL, berikut adalah beberapa rekomendasi yang dapat dipertimbangkan oleh perusahaan:
+
+#### 1. **Optimalisasi Kategori Produk dengan Penjualan Tertinggi dan Terendah**
+   * **Fokus pada kategori produk dengan pendapatan tertinggi**: Kategori seperti "Outwear & Coats," "Jeans," dan "Sweaters" merupakan kontributor pendapatan terbesar. Perusahaan dapat meningkatkan stok, variasi produk, dan promosi di kategori ini untuk memaksimalkan pendapatan.
+   * **Evaluasi kategori dengan penjualan rendah**: Kategori seperti "Clothing Sets" dan "Jumpsuits & Rompers" memiliki pendapatan rendah. Perusahaan bisa mempertimbangkan untuk mengurangi stok kategori ini atau melakukan diskon/promo besar-besaran untuk mengurangi inventory dan meningkatkan penjualan.
+
+####  2. **Penguatan Brand yang Menghasilkan Pendapatan Tinggi**
+   * **Perkuat brand yang populer**: Brand seperti Calvin Klein dan Diesel adalah yang paling menguntungkan. Perusahaan dapat mempertimbangkan kerja sama lebih intens dengan brand-brand ini atau bahkan menawarkan koleksi eksklusif untuk meningkatkan loyalitas pelanggan.
+   * **Evaluasi brand dengan pendapatan rendah**: Untuk brand yang kurang populer, perlu dilakukan evaluasi apakah perlu dilakukan promosi khusus, diskon, atau bahkan dihentikan kerja samanya.
+
+#### 3. **Strategi Penjualan Berdasarkan Analisis Waktu (Month-on-Month Revenue)**
+   * **Maksimalkan revenue di bulan Oktober**: Bulan Oktober menunjukkan pendapatan tertinggi. Strategi seperti peluncuran produk baru, kampanye iklan besar, dan promo eksklusif bisa difokuskan di bulan ini untuk memanfaatkan momentum peningkatan pembelian.
+   * **Dorong penjualan di bulan dengan pendapatan rendah**: Bulan November dan Desember menunjukkan pendapatan yang menurun. Pertimbangkan promosi diskon akhir tahun atau kampanye liburan untuk mendongkrak penjualan.
+
+#### 4. **Segmentasi Pelanggan Berdasarkan Usia**
+   * **Fokus pada segmen usia Dewasa Akhir (35-55 tahun)**: Pelanggan dalam segmen usia ini memberikan kontribusi terbesar terhadap pendapatan. Kampanye marketing yang ditargetkan untuk segmen ini, seperti promo khusus atau produk yang lebih relevan dengan gaya hidup mereka, dapat meningkatkan engagement dan revenue.
+   * **Pertimbangkan strategi untuk kelompok usia Dewasa Awal dan Remaja Akhir**: Meski kontribusi pendapatan tidak sebesar Dewasa Akhir, segmen ini masih cukup potensial. Berikan penawaran produk yang lebih sesuai dengan kebutuhan dan preferensi mereka, seperti tren fesyen yang lebih relevan atau diskon pelajar.
+
+#### 5. **Gender-Specific Marketing**
+   * **Optimalkan promosi untuk pelanggan laki-laki**: Pelanggan laki-laki memberikan kontribusi revenue lebih besar dibandingkan perempuan. Perusahaan dapat membuat kampanye iklan atau produk yang lebih ditargetkan pada kebutuhan dan preferensi pria.
+   * **Tingkatkan penjualan pada pelanggan perempuan**: Meskipun kontribusi pelanggan perempuan lebih rendah, ada peluang untuk meningkatkan pendapatan melalui penawaran yang lebih spesifik, seperti koleksi mode eksklusif untuk wanita atau diskon khusus.
+
+#### 6. **Targeting Negara dengan Jumlah Pelanggan Terbesar**
+   * **Fokus pada China dan Amerika Serikat**: China dan AS memiliki jumlah pelanggan terbesar. Pertimbangkan untuk membuat kampanye marketing yang ditargetkan untuk negara-negara ini, seperti penyesuaian harga lokal, peluncuran produk yang sesuai dengan preferensi lokal, dan peningkatan layanan pelanggan.
+   * **Evaluasi pasar di negara-negara dengan potensi lebih kecil**: Misalnya, untuk Brasil dan Korea Selatan, perusahaan dapat melakukan riset lebih lanjut untuk mengetahui preferensi pasar lokal, dan menargetkan mereka dengan lebih efektif melalui promo atau produk yang lebih disesuaikan.
+
+#### 7. **Pemberian Diskon untuk Pelanggan Terbaik**
+   * **Berikan insentif pada pelanggan dengan pembelian terbanyak**: Tabel menunjukkan 9 pelanggan dengan total pembelian tertinggi. Memberikan diskon eksklusif atau loyalty program kepada pelanggan ini dapat meningkatkan retensi pelanggan dan mendorong pembelian lebih lanjut.
+
+Dengan rekomendasi ini, perusahaan dapat memaksimalkan potensi penjualan dan pendapatan melalui pendekatan yang lebih strategis dan terfokus pada data.
